@@ -10,7 +10,7 @@ import (
 
 // database is the package global db  - this reference is not exported outside the package.
 var database adapters.Database
-var DB adapters.Database = database
+var DB = &database
 
 // OpenDatabase opens the database with the given options
 func OpenDatabase(opts map[string]string) error {
