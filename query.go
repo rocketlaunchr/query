@@ -473,7 +473,7 @@ func (q *Query) QueryString() string {
 			q.sel = fmt.Sprintf("SELECT %s.* FROM %s", q.table(), q.table())
 		}
 
-		q.sql = fmt.Sprintf("%s %s %s %s %s %s %s %s", q.sel, q.join, q.where, q.group, q.having, q.order, q.offset, q.limit)
+		q.sql = fmt.Sprintf("%s %s %s %s %s %s %s %s", q.sel, q.join, q.where, q.group, q.having, q.order, q.limit, q.offset)
 		q.sql = strings.TrimRight(q.sql, " ")
 		q.sql = strings.Replace(q.sql, "  ", " ", -1)
 		q.sql = strings.Replace(q.sql, "   ", " ", -1)
